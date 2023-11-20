@@ -1,0 +1,43 @@
+title: Cookbook
+longtitle: Cookbook
+author: Sebastian Krüger
+email: sk@honeymachine.io
+description: >
+  Things i love to eat, i love to cook.
+
+url: "https://artificialhoney.github.io"
+baseurl: "/cookbook"
+
+theme: just-the-docs
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+collections:
+  recipes:
+    output: true
+    permalink: /:collection/:title
+
+# Just The Docs
+color_scheme: honeymachine
+
+aux_links:
+  "Just the Docs on GitHub": 
+    - "https://github.com/artificialhoney/books/cookbook"
+
+nav_external_links: []
+
+# Footer content
+# appears at the bottom of every page's main content
+
+# Back to top link
+back_to_top: true
+back_to_top_text: "Back to top"
+
+footer_content: ""
+
+just_the_docs:
+  collections:
+    recipes:
+      name: Recipes
