@@ -6,6 +6,9 @@
 # Sample workflow for building and deploying a Jekyll site to GitHub Pages
 name: Deploy Jekyll site to Pages
 
+env:
+  JEKYLL_ENV: production
+
 on:
   push:
     branches: ["main"]
@@ -31,6 +34,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          repository: artificialhoney/just-the-docs
+          ref: honeymachine
+          path: just-the-docs
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
@@ -42,11 +51,7 @@ jobs:
         uses: actions/configure-pages@v3
       - name: Build with Jekyll
         # Outputs to the './_site' directory by default
-        run: | 
-          git clone --depth 1 -b honeymachine https://github.com/artificialhoney/just-the-docs.git ../just-the-docs
-          bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
-        env:
-          JEKYLL_ENV: production
+        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
       - name: Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v1
