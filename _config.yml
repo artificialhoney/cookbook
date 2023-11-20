@@ -8,6 +8,9 @@ description: >
 url: "https://artificialhoney.github.io"
 baseurl: "/cookbook"
 
+exclude:
+  - just-the-docs
+
 theme: just-the-docs
 
 sass:
