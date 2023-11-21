@@ -25,9 +25,6 @@ collections:
 # Just The Docs
 color_scheme: honeymachine
 
-aux_links:
-  "GitHub": "https://github.com/artificialhoney/cookbook"
-
 nav_external_links: []
 
 gh_edit_link_text: "Edit this page on GitHub"
